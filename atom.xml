@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://showchi.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-04-26T09:14:48.853Z</updated>
+    <title>Jade Worths</title>
+    <updated>2020-04-26T09:37:55.313Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://showchi.github.io"/>
     <link rel="self" href="https://showchi.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>Less is More</subtitle>
     <logo>https://showchi.github.io/images/avatar.png</logo>
     <icon>https://showchi.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, Jade Worths</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://showchi.github.io/post/hello-gridea/</id>
