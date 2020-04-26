@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Mac必备 | Jade Worths</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://showchi.github.io/favicon.ico?v=1587894229091">
+<link rel="stylesheet" href="https://showchi.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Mac必备
+RVM安装
+Install GPG keys:
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E7..." />
+    <meta name="keywords" content="Mac,效率" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://showchi.github.io">
+        <img src="https://showchi.github.io/images/avatar.png?v=1587894229091" class="site-logo">
+        <h1 class="site-title">Jade Worths</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Less is More
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://showchi.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Mac必备</h2>
+            <div class="post-date">2020-04-26</div>
+            
+            <div class="post-content" v-pre>
+              <h4 id="mac必备">Mac必备</h4>
+<h5 id="rvm安装">RVM安装</h5>
+<p>Install GPG keys:</p>
+<pre><code class="language-shell">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre>
+<p>Install RVM:</p>
+<pre><code class="language-shell">\curl -sSL https://get.rvm.io | bash -s stable
+</code></pre>
+<p>常用指令：</p>
+<pre><code class="language-shell">rvm list known
+rvm install 2.x.x
+rvm use 2.x.x
+rvm use 2.x.x --default
+</code></pre>
+<p>#####Homebrew</p>
+<p>安装Homebrew：</p>
+<pre><code class="language-shell">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+<p>常用指令：</p>
+<pre><code class="language-shell">brew install wget
+brew cask install firefox
+</code></pre>
+<p>####Oh-my-zsh</p>
+<p>安装：</p>
+<pre><code class="language-shell">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+</code></pre>
+<p>常用插件：</p>
+<pre><code class="language-shell">brew install zsh-syntax-highlighting
+brew install zsh-autosuggestions
+</code></pre>
+<h4 id="常用工具">常用工具</h4>
+<p>安装iterm2：</p>
+<pre><code class="language-shell">brew cask install iterm2
+</code></pre>
+<p>安装git-flow：</p>
+<pre><code class="language-shell">brew install git-flow
+</code></pre>
+<p>安装cocoapods：</p>
+<pre><code class="language-shell">gem install bundler
+bundle install cocoapods
+sudo gem update --system // 可能需要更新gem
+</code></pre>
+<p>安装fastlane：</p>
+<pre><code class="language-shell">gem install fastlane
+</code></pre>
+<p>安装JDK：</p>
+<pre><code class="language-shell">brew cask install homebrew/cask-versions/java8
+</code></pre>
+<p>安装Atom：</p>
+<pre><code class="language-shell">brew cask install atom
+</code></pre>
+<p>安装fir-cli：</p>
+<pre><code class="language-shell">gem install fir-cli
+</code></pre>
+<h4 id="mac瘦身">Mac瘦身</h4>
+<p>删除不可用模拟器：</p>
+<pre><code class="language-shell">xcrun simctl delete unavailable
+</code></pre>
+<p>移除对旧设备的支持：</p>
+<pre><code class="language-shell">~/Library/Developer/Xcode/iOS\ DeviceSupport # 路径
+</code></pre>
+<p>移除Archives：</p>
+<pre><code class="language-shell">~/Library/Developer/Xcode/Archives # 不可恢复，建议备份DSYM文件夹
+</code></pre>
+<p>移除DerivedData：</p>
+<pre><code class="language-shell">~/Library/Developer/Xcode/DerivedData
+</code></pre>
+<p>使用ncdu清理：</p>
+<pre><code class="language-shell">brew install ncdu # 安装
+ncdu # 启动
+sudo ncdu # root权限启动
+#  使用enter键进入文件夹；使用d键删除文件或文件夹；使用左右方向键进入和返回文件夹；使用q键退出
+</code></pre>
+<p>清理手动下载的模拟器：</p>
+<pre><code class="language-shell">/Library/Developer/CoreSimulator/Profiles/Runtimes
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://showchi.github.io/tag/j0uP2qolR/" class="tag">
+                    Mac
+                  </a>
+                
+                  <a href="https://showchi.github.io/tag/ONtghwA_KA/" class="tag">
+                    效率
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://showchi.github.io/post/powershell-mei-hua-gai-zao/">
+                  <h3 class="post-title">
+                    PowerShell美化改造
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

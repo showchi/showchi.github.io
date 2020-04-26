@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>PowerShell美化改造 | Jade Worths</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://showchi.github.io/favicon.ico?v=1587894229091">
+<link rel="stylesheet" href="https://showchi.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="PowerShell美化改造
+字体篇
+1、下载字体，解压文件，右键选择需要安装的字体，点击安装；
+2、重新启动一个PowerShell终端，在菜单栏上右键，选择属性-字体，选择安装好的更纱字体。适合终端使用的等宽字体是「等距更纱黑体 T S..." />
+    <meta name="keywords" content="PowerShell" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://showchi.github.io">
+        <img src="https://showchi.github.io/images/avatar.png?v=1587894229091" class="site-logo">
+        <h1 class="site-title">Jade Worths</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Less is More
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://showchi.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">PowerShell美化改造</h2>
+            <div class="post-date">2020-04-26</div>
+            
+            <div class="post-content" v-pre>
+              <h3 id="powershell美化改造">PowerShell美化改造</h3>
+<h4 id="字体篇">字体篇</h4>
+<p>1、下载<a href="https://github.com/be5invis/Sarasa-Gothic/releases">字体</a>，解压文件，右键选择需要安装的字体，点击安装；</p>
+<p>2、重新启动一个PowerShell终端，在菜单栏上右键，选择<strong>属性-字体</strong>，选择安装好的更纱字体。适合终端使用的等宽字体是「等距更纱黑体 T SC」或「Sarasa Mono T SC」。</p>
+<p>####Windows下的包管理工具Scoop</p>
+<ul>
+<li>允许PowerShell执行本地脚本：</li>
+</ul>
+<pre><code class="language-powershell">Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+</code></pre>
+<ul>
+<li>安装Scoop：</li>
+</ul>
+<pre><code class="language-powershell">iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+</code></pre>
+<p>tips：如果遇到问题，请使用管理员身份重新运行一次</p>
+<ul>
+<li>获取Scoop使用方法：</li>
+</ul>
+<pre><code class="language-powershell">scoop help
+</code></pre>
+<h4 id="powershell主题化">PowerShell主题化</h4>
+<p>使用<a href="https://github.com/lukesampson/concfg">Concfg</a>修改<a href="https://github.com/lukesampson/concfg/tree/master/presets">字体和颜色主题</a>，使用<a href="https://github.com/lukesampson/pshazz">Pshazz</a>提供自定义提示和Git以及SSH相关功能。</p>
+<pre><code class="language-powershell">scoop install 7zip git openssh concfg
+
+# back-up current console settings
+concfg export console-backup.json
+
+# use solarized color theme
+concfg import solarized-dark
+
+# You'll see this warning:
+#     overrides in the registry and shortcut files might interfere with
+#     your concfg settings.
+#     would you like to search for and remove them? (Y/n):
+# Enter 'n' if you're not sure yet: you can always run 'concfg clean' later
+
+scoop install pshazz
+</code></pre>
+<h4 id="常用软件和环境">常用软件和环境</h4>
+<h5 id="typora">typora</h5>
+<pre><code class="language-powershell">scoop install typora
+</code></pre>
+<h5 id="java开发环境">Java开发环境</h5>
+<pre><code class="language-powershell">scoop bucket add java
+scoop search jdk
+scoop install oraclejdk-lts
+</code></pre>
+<h5 id="flutter开发环境">Flutter开发环境</h5>
+<pre><code class="language-powershell">scoop install flutter
+flutter doctor --android-licenses
+</code></pre>
+<h5 id="visual-studio-code">Visual Studio Code</h5>
+<pre><code class="language-shell">scoop install vscode
+scoop install vscode-portable
+</code></pre>
+<h5 id="emulator">Emulator</h5>
+<pre><code class="language-shell">sdkmanager &quot;system-images;android-27;google_apis_playstore;x86&quot;
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://showchi.github.io/tag/k1ew9wEw4/" class="tag">
+                    PowerShell
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
