@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://showchi.github.io</id>
     <title>Jade Worths</title>
-    <updated>2020-04-26T09:47:10.318Z</updated>
+    <updated>2020-04-26T09:53:10.032Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://showchi.github.io"/>
     <link rel="self" href="https://showchi.github.io/atom.xml"/>
@@ -16,8 +16,8 @@
         <link href="https://showchi.github.io/post/mac-bi-bei/">
         </link>
         <updated>2020-04-26T09:42:11.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="mac必备">Mac必备</h4>
-<h5 id="rvm安装">RVM安装</h5>
+        <content type="html"><![CDATA[<h3 id="mac必备">Mac必备</h3>
+<h4 id="rvm安装">RVM安装</h4>
 <p>Install GPG keys:</p>
 <pre><code class="language-shell">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 </code></pre>
@@ -30,7 +30,7 @@ rvm install 2.x.x
 rvm use 2.x.x
 rvm use 2.x.x --default
 </code></pre>
-<p>#####Homebrew</p>
+<h4 id="homebrew">Homebrew</h4>
 <p>安装Homebrew：</p>
 <pre><code class="language-shell">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 </code></pre>
@@ -38,7 +38,7 @@ rvm use 2.x.x --default
 <pre><code class="language-shell">brew install wget
 brew cask install firefox
 </code></pre>
-<p>####Oh-my-zsh</p>
+<h4 id="oh-my-zsh">Oh-my-zsh</h4>
 <p>安装：</p>
 <pre><code class="language-shell">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
 </code></pre>
@@ -46,7 +46,7 @@ brew cask install firefox
 <pre><code class="language-shell">brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
 </code></pre>
-<h4 id="常用工具">常用工具</h4>
+<h3 id="常用工具">常用工具</h3>
 <p>安装iterm2：</p>
 <pre><code class="language-shell">brew cask install iterm2
 </code></pre>
@@ -70,7 +70,7 @@ sudo gem update --system // 可能需要更新gem
 <p>安装fir-cli：</p>
 <pre><code class="language-shell">gem install fir-cli
 </code></pre>
-<h4 id="mac瘦身">Mac瘦身</h4>
+<h3 id="mac瘦身">Mac瘦身</h3>
 <p>删除不可用模拟器：</p>
 <pre><code class="language-shell">xcrun simctl delete unavailable
 </code></pre>
@@ -104,7 +104,7 @@ sudo ncdu # root权限启动
 <h4 id="字体篇">字体篇</h4>
 <p>1、下载<a href="https://github.com/be5invis/Sarasa-Gothic/releases">字体</a>，解压文件，右键选择需要安装的字体，点击安装；</p>
 <p>2、重新启动一个PowerShell终端，在菜单栏上右键，选择<strong>属性-字体</strong>，选择安装好的更纱字体。适合终端使用的等宽字体是「等距更纱黑体 T SC」或「Sarasa Mono T SC」。</p>
-<p>####Windows下的包管理工具Scoop</p>
+<h4 id="windows下的包管理工具scoop">Windows下的包管理工具Scoop</h4>
 <ul>
 <li>允许PowerShell执行本地脚本：</li>
 </ul>
